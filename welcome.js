@@ -158,7 +158,15 @@ document.addEventListener('DOMContentLoaded', function() {
         authButtons.classList.toggle('active');
         mobileMenuBtn.classList.toggle('active');
     });
-    
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
